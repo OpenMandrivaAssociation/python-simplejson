@@ -1,14 +1,18 @@
-%define shortname simplejson
+%define shortname	simplejson
+
 Name:           python-%{shortname}
-Version:        2.0.3
+Version:        2.0.6
 Release:        %mkrel 1
 Summary:        Simple, fast, extensible JSON encoder/decoder for Python
 Group:          Development/Python
 License:        MIT
 URL:            http://undefined.org/python/#simplejson
-Source0:        http://pypi.python.org/packages/source/s/%{shortname}/%{shortname}-%{version}.tar.gz
+# Tarballs don't get released, so:
+# svn checkout http://simplejson.googlecode.com/svn/tags/%{shortname}-%{version}
+# tar cvYf %{shortname}-%{version}.tar.lzma %{shortname}-%{version} --exclude=".svn*"
+# - AdamW 2008/12
+Source0:        http://pypi.python.org/packages/source/s/%{shortname}/%{shortname}-%{version}.tar.lzma
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-
 BuildRequires:  python-devel
 
 %description
