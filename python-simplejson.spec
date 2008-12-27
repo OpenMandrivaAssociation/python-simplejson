@@ -13,7 +13,8 @@ URL:            http://undefined.org/python/#simplejson
 # - AdamW 2008/12
 Source0:        http://pypi.python.org/packages/source/s/%{shortname}/%{shortname}-%{version}.tar.lzma
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:  python-devel
+BuildRequires:	python-setuptools
+%py_requires -d
 
 %description
 simplejson is a simple, fast, complete, correct and extensible JSON
