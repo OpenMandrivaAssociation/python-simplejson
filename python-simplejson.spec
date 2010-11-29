@@ -1,8 +1,8 @@
 %define shortname	simplejson
 
 Name:           python-%{shortname}
-Version:        2.1.1
-Release:        %mkrel 2
+Version:        2.1.2
+Release:        %mkrel 1
 Summary:        Simple, fast, extensible JSON encoder/decoder for Python
 Group:          Development/Python
 License:        MIT
