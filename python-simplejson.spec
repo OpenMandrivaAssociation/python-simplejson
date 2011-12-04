@@ -1,8 +1,8 @@
 %define shortname	simplejson
 
 Name:           python-%{shortname}
-Version:        2.1.6
-Release:        %mkrel 1
+Version:        2.2.1
+Release:        1
 Summary:        Simple, fast, extensible JSON encoder/decoder for Python
 Group:          Development/Python
 License:        MIT
@@ -37,9 +37,6 @@ by default).
 %install
 rm -rf %{buildroot}
 %{__python} setup.py install -O1 --skip-build --root %{buildroot} --install-purelib=%py_platsitedir
-
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
