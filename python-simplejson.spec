@@ -1,7 +1,7 @@
 %define shortname	simplejson
 
 Name:           python-%{shortname}
-Version:        2.3.2
+Version:        2.3.3
 Release:        1
 Summary:        Simple, fast, extensible JSON encoder/decoder for Python
 Group:          Development/Python
