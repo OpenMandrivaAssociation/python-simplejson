@@ -1,14 +1,13 @@
 %define shortname	simplejson
 
 Name:           python-%{shortname}
-Version:        3.1.0
+Version:        3.3.0
 Release:        1
 Summary:        Simple, fast, extensible JSON encoder/decoder for Python
 Group:          Development/Python
 License:        MIT
 URL:            http://undefined.org/python/#simplejson
 Source0:        http://pypi.python.org/packages/source/s/simplejson/%{shortname}-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	python-setuptools
 %py_requires -d
 
@@ -35,14 +34,9 @@ by default).
 %{__python} setup.py build
 
 %install
-rm -rf %{buildroot}
 %{__python} setup.py install -O1 --skip-build --root %{buildroot} --install-purelib=%py_platsitedir
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,-)
 %{py_platsitedir}/*
 
 
