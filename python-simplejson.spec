@@ -1,15 +1,18 @@
 %define shortname	simplejson
 
+# Disable useless provides ('_speedups.so' and similar)
+%define __noautoprov '_.*\.so'
+
 Name:           python-%{shortname}
 Version:        3.3.0
-Release:        1
+Release:        2
 Summary:        Simple, fast, extensible JSON encoder/decoder for Python
 Group:          Development/Python
 License:        MIT
 URL:            http://undefined.org/python/#simplejson
 Source0:        http://pypi.python.org/packages/source/s/simplejson/%{shortname}-%{version}.tar.gz
-BuildRequires:	python-setuptools
-%py_requires -d
+BuildRequires:	python-distribute
+BuildRequires:	python-devel
 
 %description
 simplejson is a simple, fast, complete, correct and extensible JSON
@@ -34,7 +37,7 @@ by default).
 %{__python} setup.py build
 
 %install
-%{__python} setup.py install -O1 --skip-build --root %{buildroot} --install-purelib=%py_platsitedir
+%{__python} setup.py install -O1 --skip-build --root %{buildroot} --install-purelib=%{py_platsitedir}
 
 %files
 %{py_platsitedir}/*
