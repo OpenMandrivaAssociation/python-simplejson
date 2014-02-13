@@ -9,7 +9,7 @@ License:        MIT
 URL:            http://undefined.org/python/#simplejson
 Source0:        http://pypi.python.org/packages/source/s/simplejson/%{shortname}-%{version}.tar.gz
 BuildRequires:	python-setuptools
-%py_requires -d
+BuildRequires:  pkgconfig(python)
 
 %description
 simplejson is a simple, fast, complete, correct and extensible JSON
