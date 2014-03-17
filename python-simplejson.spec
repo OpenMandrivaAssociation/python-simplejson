@@ -5,12 +5,12 @@
 
 Summary:	Simple, fast, extensible JSON encoder/decoder for Python
 Name:		python-%{shortname}
-Version:	3.3.0
-Release:	6
+Version:	3.3.3
+Release:	1
 Group:		Development/Python
 License:	MIT
 Url:		http://undefined.org/python/#simplejson
-Source0:	http://pypi.python.org/packages/source/s/simplejson/%{shortname}-%{version}.tar.gz
+Source0:	http://pypi.python.org/packages/source/s/simplejson/simplejson-%{version}.tar.gz
 BuildRequires:	python-distribute
 BuildRequires:	pkgconfig(python)
 
@@ -34,11 +34,12 @@ by default).
 %setup -qn %{shortname}-%{version}
 
 %build
-%{__python} setup.py build
+python setup.py build
 
 %install
-%{__python} setup.py install -O1 --skip-build --root %{buildroot} --install-purelib=%{py_platsitedir}
+python setup.py install -O1 --skip-build --root %{buildroot} --install-purelib=%{py_platsitedir}
 
 %files
 %{py_platsitedir}/*
+
 
