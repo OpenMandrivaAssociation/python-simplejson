@@ -4,8 +4,9 @@
 %define __noautoprov '_.*\.so'
 
 Summary:	Simple, fast, extensible JSON encoder/decoder for Python
+
 Name:		python-%{shortname}
-Version:	3.3.3
+Version:	3.4.0
 Release:	1
 Group:		Development/Python
 License:	MIT
@@ -41,5 +42,6 @@ python setup.py install -O1 --skip-build --root %{buildroot} --install-purelib=%
 
 %files
 %{py_platsitedir}/*
+
 
 
