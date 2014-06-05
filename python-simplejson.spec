@@ -7,8 +7,9 @@ Summary:	Simple, fast, extensible JSON encoder/decoder for Python
 
 
 
+
 Name:		python-%{shortname}
-Version:	3.5.1
+Version:	3.5.2
 Release:	1
 Group:		Development/Python
 License:	MIT
@@ -44,6 +45,7 @@ python setup.py install -O1 --skip-build --root %{buildroot} --install-purelib=%
 
 %files
 %{py_platsitedir}/*
+
 
 
 
