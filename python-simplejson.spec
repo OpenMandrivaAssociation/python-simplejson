@@ -10,7 +10,7 @@ Summary:	Simple, fast, extensible JSON encoder/decoder for Python
 
 Name:		python-%{shortname}
 Version:	3.5.2
-Release:	2
+Release:	3
 Group:		Development/Python
 License:	MIT
 Url:		http://undefined.org/python/#simplejson
