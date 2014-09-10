@@ -12,6 +12,7 @@ License:        MIT
 URL:            http://undefined.org/python/#simplejson
 Source0:        http://pypi.python.org/packages/source/s/simplejson/%{shortname}-%{version}.tar.gz
 BuildRequires:	python-distribute
+BuildRequires:	python-sphinx
 BuildRequires:	pkgconfig(python)
 
 %description
