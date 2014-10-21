@@ -6,5 +6,6 @@ removed_sources:
   simplejson-3.5.1.tar.gz: 9f8797d61078077882ad5ab1b65877afd04eac0a
   simplejson-3.5.2.tar.gz: cec245bc0d1ec880ffe2106f3318b5f7c44e5774
   simplejson-3.5.3.tar.gz: f060a89ccc446e59293f6c7f9ea1806d8130d4e8
-sources:
   simplejson-3.6.3.tar.gz: c199e77cea2f897ab51b6236287a4d71b2f38cc3
+sources:
+  simplejson-3.6.4.tar.gz: 1bf946ff3c09eedf70a8de355d40931858b8c5a3
