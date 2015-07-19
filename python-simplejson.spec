@@ -5,7 +5,7 @@
 
 Name:           python-%{shortname}
 Version:        3.6.5
-Release:        2
+Release:        3
 Summary:        Simple, fast, extensible JSON encoder/decoder for Python
 Group:          Development/Python
 License:        MIT
