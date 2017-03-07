@@ -1,12 +1,2 @@
-removed_sources:
-  simplejson-3.3.0.tar.gz: 18f2e278a4a5f976460b690068c03c0e28045b79
-  simplejson-3.3.3.tar.gz: 4f3778612aa356e6fc585b97a47b3076d7dc08d2
-  simplejson-3.4.0.tar.gz: d9ae294f7797c40646d8054f1ae95fa48cc57a57
-  simplejson-3.4.1.tar.gz: d00e3b83e5171884daab7f8036d70582d6ea52b5
-  simplejson-3.5.1.tar.gz: 9f8797d61078077882ad5ab1b65877afd04eac0a
-  simplejson-3.5.2.tar.gz: cec245bc0d1ec880ffe2106f3318b5f7c44e5774
-  simplejson-3.5.3.tar.gz: f060a89ccc446e59293f6c7f9ea1806d8130d4e8
-  simplejson-3.6.3.tar.gz: c199e77cea2f897ab51b6236287a4d71b2f38cc3
-  simplejson-3.6.4.tar.gz: 1bf946ff3c09eedf70a8de355d40931858b8c5a3
 sources:
-  simplejson-3.6.5.tar.gz: 4e3f2557fc8003115cf5d9c388845c03aec83121
+  simplejson-3.10.0.tar.gz: dffc85c6851430578acf138c2a1193bc89a3eb0f

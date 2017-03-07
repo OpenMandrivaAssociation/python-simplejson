@@ -4,16 +4,16 @@
 %define shortname simplejson
 
 Name:           python-%{shortname}
-Version:        3.6.5
-Release:        3
+Version:        3.10.0
+Release:        1
 Summary:        Simple, fast, extensible JSON encoder/decoder for Python
 Group:          Development/Python
 License:        MIT
 URL:            http://undefined.org/python/#simplejson
 Source0:        http://pypi.python.org/packages/source/s/simplejson/simplejson-%{version}.tar.gz
-BuildRequires:	python-distribute
-BuildRequires:	python-sphinx
-BuildRequires:	pkgconfig(python)
+BuildRequires:	python2-distribute
+BuildRequires:	python2-sphinx
+BuildRequires:	pkgconfig(python2)
 
 %description
 simplejson is a simple, fast, complete, correct and extensible JSON
@@ -49,20 +49,17 @@ cp -a . %{py2dir}
 pushd %{py2dir}
 %{__python2} setup.py build
 popd
-python setup.py build
-./scripts/make_docs.py
+%{__python3} setup.py build
 
 %install
-python setup.py install -O1 --skip-build --root %{buildroot} --install-purelib=%{py_platsitedir}
-rm docs/.buildinfo
-rm docs/.nojekyll
+%{__python} setup.py install -O1 --skip-build --root %{buildroot} --install-purelib=%{py_platsitedir}
 
 pushd %{py2dir}
 %{__python2} setup.py install --skip-build --root=%{buildroot}
 popd
 
 %files
-%doc docs LICENSE.txt
+%doc LICENSE.txt
 %{py_platsitedir}/*
 
 %files -n python2-simplejson
