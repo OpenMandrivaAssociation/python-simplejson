@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   simplejson-3.16.0.tar.gz: b0bf0b12d4c7f7ac0ae23572184e59092bc46947
+sources:
+  simplejson-3.16.1.tar.gz: 4c829f221e1941bfbc0732eb386b99c74f211296
