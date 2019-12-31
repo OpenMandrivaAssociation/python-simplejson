@@ -4,13 +4,13 @@
 %define shortname simplejson
 
 Name:           python-%{shortname}
-Version:        3.16.0
-Release:        2
+Version:	3.17.0
+Release:	1
 Summary:        Simple, fast, extensible JSON encoder/decoder for Python
 Group:          Development/Python
 License:        MIT
 URL:            https://undefined.org/python/#simplejson
-Source0:        https://pypi.python.org/packages/source/s/simplejson/simplejson-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/98/87/a7b98aa9256c8843f92878966dc3d8d914c14aad97e2c5ce4798d5743e07/simplejson-3.17.0.tar.gz
 BuildRequires:	python2-distribute
 BuildRequires:	python-sphinx
 BuildRequires:	pkgconfig(python2)
