@@ -1,3 +1,5 @@
+%global debug_package %{nil}
+
 # Disable useless provides ('_speedups.so' and similar)
 %define __noautoprov '_.*\.so'
 
