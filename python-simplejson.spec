@@ -4,20 +4,23 @@
 # Disable useless provides ('_speedups.so' and similar)
 %define __noautoprov '_.*\.so'
 
-%define shortname simplejson
+%define module simplejson
 
-Name:           python-%{shortname}
-Version:	3.17.2
-Release:	2
+Name:		python-simplejson
+Version:	3.20.2
+Release:	1
 Summary:	Simple, fast, extensible JSON encoder/decoder for Python
 Group:		Development/Python
 License:	MIT
-URL:		https://undefined.org/python/#simplejson
-Source0:	https://files.pythonhosted.org/packages/98/87/a7b98aa9256c8843f92878966dc3d8d914c14aad97e2c5ce4798d5743e07/simplejson-%{version}.tar.gz
-BuildRequires:	python-sphinx
+URL:		https://github.com/simplejson/simplejson
+Source0:	https://files.pythonhosted.org/packages/source/s/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+BuildSystem:	python
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python3dist(setuptools)
-Obsoletes:	python2-simplejson
+BuildRequires:	python%{pyver}dist(sphinx)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
+Obsoletes:	python2-simplejson = %{EVRD}
 
 %description
 simplejson is a simple, fast, complete, correct and extensible JSON
@@ -36,14 +39,16 @@ The decoder can handle incoming JSON strings of any specified encoding (UTF-8
 by default).
 
 %prep
-%autosetup -n %{shortname}-%{version} -p1
+%autosetup -n %{module}-%{version} -p1
+# Remove bundled egg-info
+rm -rf %{module}.egg-info
 
 %build
-python setup.py build
-
-%install
-python setup.py install -O1 --skip-build --root %{buildroot} --install-purelib=%{py_platsitedir}
+export CFLAGS="%{optflags}"
+export LDFLAGS="%{ldflags} -lpython%{py_ver}"
+%py_build
 
 %files
-%doc LICENSE.txt
+%doc README.rst
+%license LICENSE.txt
 %{py_platsitedir}/*
