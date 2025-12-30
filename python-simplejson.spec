@@ -8,7 +8,7 @@
 
 Name:		python-simplejson
 Version:	3.20.2
-Release:	1
+Release:	2
 Summary:	Simple, fast, extensible JSON encoder/decoder for Python
 Group:		Development/Python
 License:	MIT
