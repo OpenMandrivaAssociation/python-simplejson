@@ -7,8 +7,8 @@
 %define module simplejson
 
 Name:		python-simplejson
-Version:	3.20.2
-Release:	2
+Version:	4.1.1
+Release:	1
 Summary:	Simple, fast, extensible JSON encoder/decoder for Python
 Group:		Development/Python
 License:	MIT
@@ -39,7 +39,7 @@ The decoder can handle incoming JSON strings of any specified encoding (UTF-8
 by default).
 
 %prep
-%autosetup -n %{module}-%{version} -p1
+%autosetup -n simplejson-4.1.1 -p1
 # Remove bundled egg-info
 rm -rf %{module}.egg-info
 
