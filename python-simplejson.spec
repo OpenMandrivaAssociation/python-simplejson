@@ -7,7 +7,7 @@
 %define module simplejson
 
 Name:		python-simplejson
-Version:	4.1.1
+Version:	4.2.0
 Release:	1
 Summary:	Simple, fast, extensible JSON encoder/decoder for Python
 Group:		Development/Python
@@ -15,7 +15,7 @@ License:	MIT
 URL:		https://github.com/simplejson/simplejson
 Source0:	https://files.pythonhosted.org/packages/source/s/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildSystem:	python
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(sphinx)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
