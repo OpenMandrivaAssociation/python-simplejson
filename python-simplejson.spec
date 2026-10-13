@@ -39,7 +39,7 @@ The decoder can handle incoming JSON strings of any specified encoding (UTF-8
 by default).
 
 %prep
-%autosetup -n simplejson-4.1.1 -p1
+%autosetup -n simplejson-%{version} -p1
 # Remove bundled egg-info
 rm -rf %{module}.egg-info
 
